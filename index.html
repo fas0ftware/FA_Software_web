@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FA Software — Automation, Data, Bots & Networking Tools</title>
+  <meta name="description" content="FA Software builds custom software: automation scripts, data tools, bots, networking and security tools, and websites. Python, JavaScript and SQL.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Apply the saved or system theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      var storedTheme = null;
+      try { storedTheme = localStorage.getItem("theme"); } catch (error) {}
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme =
+        storedTheme === "light" || storedTheme === "dark" ? storedTheme : (prefersDark ? "dark" : "light");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="#top">FA Software</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span class="theme-toggle__label">Dark</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title" class="hero__logo">
+          <!-- logo-dark.png is for light backgrounds, logo-light.png for dark backgrounds -->
+          <img class="logo logo--on-light" src="assets/logo-dark.png" alt="FA Software" width="480" height="480">
+          <img class="logo logo--on-dark" src="assets/logo-light.png" alt="FA Software" width="480" height="480">
+        </h1>
+        <p class="hero__tagline">Custom software for automation, data, bots and networking, built to do the job.</p>
+        <a class="button" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section__index">01 / About</p>
+        <h2 id="about-title" class="section__title">About</h2>
+        <p class="about__text">
+          I'm [YOUR NAME], the developer behind FA Software. I studied web development in high school
+          and computer programming at university, and I work with Python, JavaScript, SQL, networking
+          and cybersecurity. I build practical tools that save time, make sense of data and keep
+          systems running, from small scripts to complete applications. I build in public and share
+          real progress in my short-video series <em>Coding Until Noticed</em> on Instagram.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. Services -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="section__index">02 / Services</p>
+        <h2 id="services-title" class="section__title">Services</h2>
+        <ul class="services">
+          <li class="service">
+            <h3 class="service__title">Automation</h3>
+            <p class="service__text">Scripts and tools that take repetitive tasks off your hands, from file handling to scheduled reports.</p>
+          </li>
+          <li class="service">
+            <h3 class="service__title">Data</h3>
+            <p class="service__text">Databases, data cleaning, processing and reporting with Python and SQL.</p>
+          </li>
+          <li class="service">
+            <h3 class="service__title">Bots</h3>
+            <p class="service__text">Chat bots, assistants and scrapers that work around the clock.</p>
+          </li>
+          <li class="service">
+            <h3 class="service__title">Networking &amp; Security Tools</h3>
+            <p class="service__text">Network scanning, monitoring and security tooling for homes and small businesses.</p>
+          </li>
+          <li class="service">
+            <h3 class="service__title">Web</h3>
+            <p class="service__text">Clean, fast websites and simple web apps, offered alongside the services above.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section__index">03 / Projects</p>
+        <h2 id="projects-title" class="section__title">Projects</h2>
+        <p class="projects__hint">Swipe or scroll sideways to see more.</p>
+      </div>
+
+      <div class="projects" role="region" aria-labelledby="projects-title" tabindex="0">
+        <ul class="projects__track">
+          <li class="project">
+            <p class="project__status">Completed</p>
+            <h3 class="project__title">Home Network Monitor</h3>
+            <p class="project__text">Scans the local network, detects new devices, scans ports and shows everything on a web dashboard.</p>
+            <p class="project__tech">Python · scapy · SQLite · Flask</p>
+            <a class="project__link" href="https://github.com/fas0ftware/network-monitor" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Completed</p>
+            <h3 class="project__title">Zarathustra</h3>
+            <p class="project__text">Text-to-speech voice engine built on Edge TTS that turns long scripts into narrated audio.</p>
+            <p class="project__tech">Python · Edge TTS</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Zarathustra_TTS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Completed</p>
+            <h3 class="project__title">Heimdall</h3>
+            <p class="project__text">Stock dashboard with RSI signals, split-adjusted ROI simulation and split detection.</p>
+            <p class="project__tech">Python · Streamlit · Plotly</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Project_Heimdall" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Completed</p>
+            <h3 class="project__title">Hugnin</h3>
+            <p class="project__text">Terminal scanner that flags overbought and oversold stocks using RSI.</p>
+            <p class="project__tech">Python · yfinance</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Project_Hugnin" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Completed</p>
+            <h3 class="project__title">Dionysus</h3>
+            <p class="project__text">Reads a city's live weather and suggests a matching music mood.</p>
+            <p class="project__tech">Python · Streamlit · OpenWeatherMap</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Project_Dionysus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project project--soon">
+            <p class="project__status">Coming soon</p>
+            <h3 class="project__title">Ariadne</h3>
+            <p class="project__text">Android app for tasks and milestones, with rewards for progress.</p>
+            <p class="project__tech">Android</p>
+            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+          </li>
+          <li class="project project--soon">
+            <p class="project__status">Coming soon</p>
+            <h3 class="project__title">Hermes</h3>
+            <p class="project__text">Report automation tool that gathers data and generates reports automatically.</p>
+            <p class="project__tech">Python</p>
+            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+          </li>
+          <li class="project project--soon">
+            <p class="project__status">Coming soon</p>
+            <h3 class="project__title">Maze</h3>
+            <p class="project__text">Research project on multi-stage, labyrinth-style encryption.</p>
+            <p class="project__tech">Cryptography research</p>
+            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+          </li>
+          <li class="project project--soon">
+            <p class="project__status">Coming soon</p>
+            <h3 class="project__title">JUDA</h3>
+            <p class="project__text">Digital assistant for the smart home.</p>
+            <p class="project__tech">Smart home</p>
+            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+          </li>
+          <li class="project project--soon">
+            <p class="project__status">Coming soon</p>
+            <h3 class="project__title">Budget Tracker</h3>
+            <p class="project__text">App for tracking daily spending.</p>
+            <p class="project__tech">App</p>
+            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. Contact -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="section__index">04 / Contact</p>
+        <h2 id="contact-title" class="section__title">Let's work together</h2>
+        <p class="contact__text">Have a project in mind? Send an email and tell me what you need.</p>
+        <a class="contact__email" href="mailto:anil.hyperborea@gmail.com">anil.hyperborea@gmail.com</a>
+        <ul class="contact__links">
+          <li><a href="https://github.com/fas0ftware" target="_blank" rel="noopener noreferrer">GitHub · fas0ftware <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://instagram.com/fa.software" target="_blank" rel="noopener noreferrer">Instagram · @fa.software <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 FA Software</p>
+    </div>
+  </footer>
+</body>
+</html>
