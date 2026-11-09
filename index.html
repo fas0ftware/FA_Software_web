@@ -6,6 +6,18 @@
   <title>FA Software — Automation, Data, Bots & Networking Tools</title>
   <meta name="description" content="FA Software builds custom software: automation scripts, data tools, bots, networking and security tools, and websites. Python, JavaScript and SQL.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+  <!-- Link previews (add og:image and og:url once the final address and a preview image exist) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FA Software — Automation, Data, Bots & Networking Tools">
+  <meta property="og:description" content="Custom software for automation, data, bots, networking and security tools, and websites.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Tab icon: the white logo on dark tabs, the black logo on light tabs -->
+  <link rel="icon" type="image/png" href="assets/logo-dark.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="assets/logo-light.png" media="(prefers-color-scheme: dark)">
 
   <!-- Apply the saved or system theme before first paint to avoid a flash -->
   <script>
@@ -22,6 +34,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Without JavaScript the theme toggle cannot work, so do not show it -->
+  <noscript><style>.theme-toggle { display: none; }</style></noscript>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -140,12 +154,12 @@
             <p class="project__tech">Python · Streamlit · OpenWeatherMap</p>
             <a class="project__link" href="https://github.com/fas0ftware/Project_Dionysus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
-          <li class="project project--soon">
-            <p class="project__status">Coming soon</p>
+          <li class="project">
+            <p class="project__status">In progress</p>
             <h3 class="project__title">Ariadne</h3>
-            <p class="project__text">Android app for tasks and milestones, with rewards for progress.</p>
-            <p class="project__tech">Android</p>
-            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+            <p class="project__text">Android app that asks every hour what you are doing, scores each activity and shows your day as a number.</p>
+            <p class="project__tech">React Native · Expo · SQLite</p>
+            <a class="project__link" href="https://github.com/fas0ftware/ariadne" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project project--soon">
             <p class="project__status">Coming soon</p>
@@ -154,12 +168,12 @@
             <p class="project__tech">Python</p>
             <span class="project__link project__link--disabled">GitHub link coming soon</span>
           </li>
-          <li class="project project--soon">
-            <p class="project__status">Coming soon</p>
+          <li class="project">
+            <p class="project__status">In progress</p>
             <h3 class="project__title">Maze</h3>
-            <p class="project__text">Research project on multi-stage, labyrinth-style encryption.</p>
-            <p class="project__tech">Cryptography research</p>
-            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+            <p class="project__text">Layered honeypot that leads password guessers through fake progress and growing delays, and logs every move.</p>
+            <p class="project__tech">Python · Flask · SQLite</p>
+            <a class="project__link" href="https://github.com/fas0ftware/maze" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project project--soon">
             <p class="project__status">Coming soon</p>
