@@ -56,7 +56,7 @@ The checks cover missing local files, `#anchors` without a matching id, images w
 
 ## Before you publish
 
-- [ ] Replace `[YOUR NAME]` in the About section (the strict check fails until you do).
+- [x] Replace `[YOUR NAME]` in the About section (the strict check fails until you do).
 - [ ] Check the project cards: a card is "Coming soon" only while its repository is private or does not exist yet. Remove `project--soon` and add the GitHub link once it is public.
 - [ ] Once the final address and a preview image (about 1200×630 px) exist, add `og:url`, `og:image` and a `<link rel="canonical">` to the `<head>`.
 - [ ] Fonts load from Google Fonts. If your visitors include people in the EU, consider hosting the two font files yourself so no visitor data goes to Google.
