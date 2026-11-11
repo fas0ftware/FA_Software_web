@@ -442,3 +442,6 @@ a {
     transition: none;
   }
 }
+
+/* Without JavaScript the theme toggle cannot work, so do not show it */
+.no-js .theme-toggle { display: none; }

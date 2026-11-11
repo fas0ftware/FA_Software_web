@@ -4,6 +4,11 @@ Single-page portfolio site for **FA Software**: software services for automation
 
 Plain HTML, CSS and JavaScript. No frameworks, no build step.
 
+<p align="center">
+  <img src="docs/home-dark.png" width="49%" alt="Home, dark mode">
+  <img src="docs/projects-light.png" width="49%" alt="Projects, light mode">
+</p>
+
 ## Features
 
 - Strictly black and white design, mobile-first and responsive
@@ -14,12 +19,15 @@ Plain HTML, CSS and JavaScript. No frameworks, no build step.
 - Respects `prefers-reduced-motion`; the theme toggle is hidden when JavaScript is off
 - Tab icon follows the system theme (black logo on light tabs, white logo on dark tabs)
 - Basic link-preview tags (Open Graph and Twitter card)
+- Strict Content-Security-Policy (no inline scripts or styles; only Google Fonts as an outside source) and `no-referrer`
+- Project cards list the current versions of every public FA Software project
 
 ## Structure
 
 ```
 index.html          Page content (hero, about, services, projects, contact)
 css/style.css       All styles and theme tokens
+js/theme-init.js    Applies the saved or system theme before first paint
 js/main.js          Theme toggle
 assets/
   logo-dark.png     Black logo, used on light backgrounds

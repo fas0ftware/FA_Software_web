@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
   <title>FA Software — Automation, Data, Bots & Networking Tools</title>
   <meta name="description" content="FA Software builds custom software: automation scripts, data tools, bots, networking and security tools, and websites. Python, JavaScript and SQL.">
   <meta name="color-scheme" content="light dark">
@@ -20,22 +22,12 @@
   <link rel="icon" type="image/png" href="assets/logo-light.png" media="(prefers-color-scheme: dark)">
 
   <!-- Apply the saved or system theme before first paint to avoid a flash -->
-  <script>
-    (function () {
-      var storedTheme = null;
-      try { storedTheme = localStorage.getItem("theme"); } catch (error) {}
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme =
-        storedTheme === "light" || storedTheme === "dark" ? storedTheme : (prefersDark ? "dark" : "light");
-    })();
-  </script>
+  <script src="js/theme-init.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Without JavaScript the theme toggle cannot work, so do not show it -->
-  <noscript><style>.theme-toggle { display: none; }</style></noscript>
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -120,73 +112,87 @@
       <div class="projects" role="region" aria-labelledby="projects-title" tabindex="0">
         <ul class="projects__track">
           <li class="project">
-            <p class="project__status">Completed</p>
+            <p class="project__status">Version 2.0</p>
             <h3 class="project__title">Home Network Monitor</h3>
-            <p class="project__text">Scans the local network, detects new devices, scans ports and shows everything on a web dashboard.</p>
-            <p class="project__tech">Python · scapy · SQLite · Flask</p>
+            <p class="project__text">Scans the home network, alerts on new devices and risky open ports (desktop or phone push), activity timeline and a hardened local dashboard.</p>
+            <p class="project__tech">Python · Scapy · SQLite · Flask</p>
             <a class="project__link" href="https://github.com/fas0ftware/network-monitor" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
-            <p class="project__status">Completed</p>
-            <h3 class="project__title">Zarathustra</h3>
-            <p class="project__text">Text-to-speech voice engine built on Edge TTS that turns long scripts into narrated audio.</p>
-            <p class="project__tech">Python · Edge TTS</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Zarathustra_TTS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+            <p class="project__status">Version 0.3</p>
+            <h3 class="project__title">Maze</h3>
+            <p class="project__text">Layered honeypot with a C engine: fake progress, growing delays, every move logged; Minator report and Docker image.</p>
+            <p class="project__tech">C · libsodium · Python · Flask</p>
+            <a class="project__link" href="https://github.com/fas0ftware/maze" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
-            <p class="project__status">Completed</p>
+            <p class="project__status">Version 1.1</p>
+            <h3 class="project__title">Janus</h3>
+            <p class="project__text">Dependency-free TCP connect port scanner: IPv4/IPv6, CIDR blocks, banner grabbing, JSON output, clean under sanitizers.</p>
+            <p class="project__tech">C11 · POSIX sockets · pthreads</p>
+            <a class="project__link" href="https://github.com/fas0ftware/janus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Version 2.0</p>
             <h3 class="project__title">Heimdall</h3>
-            <p class="project__text">Stock dashboard with RSI signals, split-adjusted ROI simulation and split detection.</p>
+            <p class="project__text">Stock dashboard: candlesticks, RSI, MACD, moving-average crosses, risk metrics, lump sum vs. monthly investing, comparisons.</p>
             <p class="project__tech">Python · Streamlit · Plotly</p>
             <a class="project__link" href="https://github.com/fas0ftware/Project_Heimdall" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
-            <p class="project__status">Completed</p>
+            <p class="project__status">Version 3.0</p>
             <h3 class="project__title">Hugnin</h3>
-            <p class="project__text">Terminal scanner that flags overbought and oversold stocks using RSI.</p>
-            <p class="project__tech">Python · yfinance</p>
+            <p class="project__text">Scans 109 stocks and cryptos for RSI signals in one request, plus a private Telegram bot with new-signal alerts.</p>
+            <p class="project__tech">Python · yfinance · Telegram</p>
             <a class="project__link" href="https://github.com/fas0ftware/Project_Hugnin" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
-            <p class="project__status">Completed</p>
+            <p class="project__status">Version 2.0</p>
+            <h3 class="project__title">Orion</h3>
+            <p class="project__text">Watches product pages and sends a Telegram message when a price reaches your target or a new low.</p>
+            <p class="project__tech">Python · BeautifulSoup · Telegram</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Project_Orion" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Version 0.2</p>
+            <h3 class="project__title">JUDA</h3>
+            <p class="project__text">Smart-home assistant that understands Turkish commands, with roles, scenes and scheduled commands.</p>
+            <p class="project__tech">Python · standard library</p>
+            <a class="project__link" href="https://github.com/fas0ftware/JUDA" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Version 1.1</p>
+            <h3 class="project__title">Ariadne</h3>
+            <p class="project__text">Local-first self-development tracker for Android: hourly check-ins, scores, streaks, insights and backups.</p>
+            <p class="project__tech">React Native · Expo · TypeScript · SQLite</p>
+            <a class="project__link" href="https://github.com/fas0ftware/ariadne" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project">
+            <p class="project__status">Version 2.0</p>
             <h3 class="project__title">Dionysus</h3>
-            <p class="project__text">Reads a city's live weather and suggests a matching music mood.</p>
+            <p class="project__text">Turns a city&#x27;s live weather into a mood and a three-track playlist.</p>
             <p class="project__tech">Python · Streamlit · OpenWeatherMap</p>
             <a class="project__link" href="https://github.com/fas0ftware/Project_Dionysus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
-            <p class="project__status">Version 1</p>
-            <h3 class="project__title">Ariadne</h3>
-            <p class="project__text">Local-first self-development tracker for Android: hourly check-ins, scored activities and streaks. Milestones and rewards are next.</p>
-            <p class="project__tech">React Native · Expo · TypeScript · SQLite</p>
-            <a class="project__link" href="https://github.com/fas0ftware/ariadne" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project project--soon">
-            <p class="project__status">Coming soon</p>
-            <h3 class="project__title">Hermes</h3>
-            <p class="project__text">Report automation tool that gathers data and generates reports automatically.</p>
-            <p class="project__tech">Python</p>
-            <span class="project__link project__link--disabled">GitHub link coming soon</span>
+            <p class="project__status">Version 2.0</p>
+            <h3 class="project__title">Zarathustra</h3>
+            <p class="project__text">Text-to-speech engine for long scripts, with subtitles and batch mode.</p>
+            <p class="project__tech">Python · Edge TTS</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Zarathustra_TTS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
           </li>
           <li class="project">
+            <p class="project__status">Version 2.0</p>
+            <h3 class="project__title">Ratatoskr</h3>
+            <p class="project__text">Sends WhatsApp Web messages from the command line: several recipients, scheduling, dry runs.</p>
+            <p class="project__tech">Python · Selenium</p>
+            <a class="project__link" href="https://github.com/fas0ftware/Project_Ratatoskr" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </li>
+          <li class="project project--soon">
             <p class="project__status">In progress</p>
-            <h3 class="project__title">Maze</h3>
-            <p class="project__text">Layered honeypot that leads password guessers through fake progress and growing delays, and logs every move.</p>
-            <p class="project__tech">Python · Flask · SQLite</p>
-            <a class="project__link" href="https://github.com/fas0ftware/maze" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project project--soon">
-            <p class="project__status">Coming soon</p>
-            <h3 class="project__title">JUDA</h3>
-            <p class="project__text">Digital assistant for the smart home.</p>
-            <p class="project__tech">Smart home</p>
-            <span class="project__link project__link--disabled">GitHub link coming soon</span>
-          </li>
-          <li class="project project--soon">
-            <p class="project__status">Coming soon</p>
-            <h3 class="project__title">Budget Tracker</h3>
-            <p class="project__text">App for tracking daily spending.</p>
-            <p class="project__tech">App</p>
+            <h3 class="project__title">Prometheus &amp; Hermes</h3>
+            <p class="project__text">Automated pipeline that produces short quote videos and publishes them to YouTube Shorts and Instagram Reels.</p>
+            <p class="project__tech">Python · ffmpeg · YouTube API</p>
             <span class="project__link project__link--disabled">GitHub link coming soon</span>
           </li>
         </ul>
