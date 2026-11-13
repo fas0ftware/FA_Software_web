@@ -1,37 +1,42 @@
 # FA Software — Website
 
-Single-page portfolio site for **FA Software**: software services for automation, data, bots, networking and security tools, and web.
+Single-page portfolio site for **FA Software**: network security tools, automation, data, bots and web.
 
 Plain HTML, CSS and JavaScript. No frameworks, no build step.
 
 <p align="center">
   <img src="docs/home-dark.png" width="49%" alt="Home, dark mode">
-  <img src="docs/projects-light.png" width="49%" alt="Projects, light mode">
+  <img src="docs/projects-light.png" width="49%" alt="Selected work, light mode">
 </p>
 
 ## Features
 
-- Strictly black and white design, mobile-first and responsive
+- Black and white design, mobile-first and responsive; the colour comes only from real project screenshots
+- **Selected work:** the main projects (Home Network Monitor, Maze, Janus, Heimdall) as case studies with large screenshots, highlights and tech
+- **More projects:** a grid of every other public project with a thumbnail (greyscale until hovered, on devices that can hover)
+- Screenshots open in a lightbox (`<dialog>`), images are lazy-loaded WebP or SVG with fixed dimensions (no layout shift)
+- Hero collage of real screenshots, section navigation in the header
 - Light and dark mode: follows the system preference, has a toggle, and remembers the choice in `localStorage`
 - Logo switches with the theme
-- Projects shown as horizontally swipeable cards (CSS scroll-snap)
 - Semantic HTML, alt texts, skip link and keyboard-friendly focus styles
 - Respects `prefers-reduced-motion`; the theme toggle is hidden when JavaScript is off
 - Tab icon follows the system theme (black logo on light tabs, white logo on dark tabs)
 - Basic link-preview tags (Open Graph and Twitter card)
 - Strict Content-Security-Policy (no inline scripts or styles; only Google Fonts as an outside source) and `no-referrer`
 - Project cards list the current versions of every public FA Software project
+- Checked in Chromium at 1440 px and 390 px, light and dark: no console errors, no horizontal scroll
 
 ## Structure
 
 ```
-index.html          Page content (hero, about, services, projects, contact)
+index.html          Page content (hero, selected work, more projects, services, about, contact)
 css/style.css       All styles and theme tokens
 js/theme-init.js    Applies the saved or system theme before first paint
-js/main.js          Theme toggle
+js/main.js          Theme toggle and screenshot lightbox
 assets/
   logo-dark.png     Black logo, used on light backgrounds
   logo-light.png    White logo, used on dark backgrounds
+  projects/         Project screenshots (WebP, cropped to 16:10) and terminal recordings (SVG)
 tools/
   check_site.py     Sanity checks (broken links, missing files, alt texts, placeholders)
 .github/workflows/
@@ -50,7 +55,9 @@ Then visit http://localhost:8000.
 
 ## Editing
 
-- **Projects:** each card is an `<li class="project">` in `index.html`. Add `project--soon` to the class for the "Coming soon" style.
+- **Main projects:** each is an `<article class="case">` in `index.html`; add `case--flip` to put the image on the right. A screenshot is a `<button class="shot" data-full="...">` so it opens in the lightbox; `shot--inset` overlaps a second, smaller one.
+- **Other projects:** each card is an `<li class="card">`; `card--soon` gives the dashed "in progress" strip.
+- **New screenshots:** crop to 16:10 and convert, e.g. `magick shot.png -crop 1440x900+0+0 -resize 1400x -strip -quality 82 assets/projects/name.webp`.
 - **Theme colors:** CSS variables at the top of `css/style.css`.
 
 ## Checks

@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="referrer" content="no-referrer">
-  <title>FA Software — Automation, Data, Bots & Networking Tools</title>
-  <meta name="description" content="FA Software builds custom software: automation scripts, data tools, bots, networking and security tools, and websites. Python, JavaScript and SQL.">
+  <title>FA Software — Security Tools, Automation, Data & Bots</title>
+  <meta name="description" content="FA Software builds custom software: network security tools, automation, data tools, bots and websites. Open-source projects with tests and CI on every one.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 
-  <!-- Link previews (add og:image and og:url once the final address and a preview image exist) -->
+  <!-- Link previews (add og:image and og:url once the final address exists) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FA Software — Automation, Data, Bots & Networking Tools">
-  <meta property="og:description" content="Custom software for automation, data, bots, networking and security tools, and websites.">
+  <meta property="og:title" content="FA Software — Security Tools, Automation, Data & Bots">
+  <meta property="og:description" content="Network security tools, automation, data tools, bots and websites. Open source, tested, built to do the job.">
   <meta name="twitter:card" content="summary">
 
   <!-- Tab icon: the white logo on dark tabs, the black logo on light tabs -->
@@ -26,7 +26,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -36,6 +36,13 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="site-header__brand" href="#top">FA Software</a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#more">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
         <span class="theme-toggle__label">Dark</span>
       </button>
@@ -43,166 +50,290 @@
   </header>
 
   <main id="main">
-    <!-- 1. Hero -->
+    <!-- Hero -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title" class="hero__logo">
-          <!-- logo-dark.png is for light backgrounds, logo-light.png for dark backgrounds -->
-          <img class="logo logo--on-light" src="assets/logo-dark.png" alt="FA Software" width="480" height="480">
-          <img class="logo logo--on-dark" src="assets/logo-light.png" alt="FA Software" width="480" height="480">
-        </h1>
-        <p class="hero__tagline">Custom software for automation, data, bots and networking, built to do the job.</p>
-        <a class="button" href="#contact">Get in touch</a>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <div class="hero__logo">
+            <img class="logo logo--on-light" src="assets/logo-dark.png" alt="FA Software logo" width="480" height="480">
+            <img class="logo logo--on-dark" src="assets/logo-light.png" alt="FA Software logo" width="480" height="480">
+          </div>
+          <h1 id="hero-title" class="hero__title">Security tools, automation and bots, built to do the job.</h1>
+          <p class="hero__tagline">FA Software makes practical software: network scanners and honeypots, data dashboards, assistants and the scripts that keep everything running. Open source, tested, and explained.</p>
+          <div class="hero__actions">
+            <a class="button" href="#work">See the work</a>
+            <a class="button button--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <img class="hero__shot hero__shot--main" src="assets/projects/network-monitor.webp" alt="" width="1400" height="875">
+          <img class="hero__shot hero__shot--side" src="assets/projects/maze.webp" alt="" width="1400" height="840">
+          <img class="hero__shot hero__shot--term" src="assets/projects/janus.svg" alt="" width="826" height="334">
+        </div>
+
+        <ul class="facts" aria-label="At a glance">
+          <li class="fact"><span class="fact__value">13</span><span class="fact__label">open-source projects</span></li>
+          <li class="fact"><span class="fact__value">CI</span><span class="fact__label">tests and security scans on every repo</span></li>
+          <li class="fact"><span class="fact__value">C · Py · TS</span><span class="fact__label">from sockets to dashboards to mobile apps</span></li>
+        </ul>
       </div>
     </section>
 
-    <!-- 2. About -->
-    <section class="section" id="about" aria-labelledby="about-title">
+    <!-- Selected work -->
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="container">
-        <p class="section__index">01 / About</p>
-        <h2 id="about-title" class="section__title">About</h2>
+        <p class="section__index">01 / Selected work</p>
+        <h2 id="work-title" class="section__title">Selected work</h2>
+        <p class="section__lead">A home-network security set built from the ground up — a scanner in C, a decoy that wastes attackers' time, and a monitor that tells you what to fix — plus a market dashboard.</p>
+
+        <article class="case">
+          <figure class="case__media">
+            <button class="shot" type="button" data-full="assets/projects/network-monitor.webp" aria-label="Enlarge: Home Network Monitor dashboard">
+              <img src="assets/projects/network-monitor.webp" alt="Home Network Monitor dashboard: security score, a fix-first list, devices with colour-coded open ports and an activity timeline" width="1400" height="875" loading="lazy" decoding="async">
+            </button>
+            <button class="shot shot--inset" type="button" data-full="assets/projects/network-monitor-advice.webp" aria-label="Enlarge: advice panel for an open SMB port">
+              <img src="assets/projects/network-monitor-advice.webp" alt="Advice panel for an open SMB port, with copyable commands for Windows and Linux" width="1400" height="875" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <div class="case__body">
+            <p class="case__meta"><span class="tag">Version 2.1</span><span>Network security</span></p>
+            <h3 class="case__title">Home Network Monitor</h3>
+            <p class="case__text">Knows every device on your Wi-Fi, checks each one for open ports and pushes an alert to your phone when something new shows up. Then it tells you what to do about it.</p>
+            <ul class="case__points">
+              <li>Security advisor: risk level, explanation and step-by-step fix for 29 ports</li>
+              <li>Security score and a "fix these first" list</li>
+              <li>Hardened dashboard: token, CSP, CSRF and DNS-rebinding guards</li>
+            </ul>
+            <p class="case__tech">Python · Scapy · SQLite · Flask · JavaScript</p>
+            <a class="case__link" href="https://github.com/fas0ftware/network-monitor" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case case--flip">
+          <figure class="case__media">
+            <button class="shot" type="button" data-full="assets/projects/maze.webp" aria-label="Enlarge: Minator attacker report">
+              <img src="assets/projects/maze.webp" alt="Minator report: attempts per hour, top guessed passwords and a table of attacker sources with threat levels" width="1400" height="840" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <div class="case__body">
+            <p class="case__meta"><span class="tag">Version 0.3.1</span><span>Honeypot</span></p>
+            <h3 class="case__title">Maze</h3>
+            <p class="case__text">A fake login page in layers. Attackers find "passwords" that lead deeper, every answer gets slower, and every move is logged. Nobody at home has a reason to log in, so every attempt is a signal.</p>
+            <ul class="case__points">
+              <li>C engine with Argon2id and constant-time checks (no timing leaks)</li>
+              <li>Minator: a passive report of who tried what, and how long they were kept busy</li>
+              <li>Non-root, read-only Docker image behind a production WSGI server</li>
+            </ul>
+            <p class="case__tech">C · libsodium · Python · Flask · Docker</p>
+            <a class="case__link" href="https://github.com/fas0ftware/maze" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="case__media case__media--terminal">
+            <button class="shot" type="button" data-full="assets/projects/janus.svg" aria-label="Enlarge: Janus scan output">
+              <img src="assets/projects/janus.svg" alt="Janus terminal output: host discovery marks two silent hosts down, finds an open web port with its banner, and a UDP scan" width="826" height="334" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <div class="case__body">
+            <p class="case__meta"><span class="tag">Version 1.5</span><span>Port scanner</span></p>
+            <h3 class="case__title">Janus</h3>
+            <p class="case__text">A dependency-free port scanner written in C. One pool of worker threads covers every host at once, so a silent subnet costs one timeout instead of hundreds.</p>
+            <ul class="case__points">
+              <li>TCP and UDP, host discovery without root, IPv4/IPv6, CIDR blocks</li>
+              <li>Sanitized banners and JSON output for other tools</li>
+              <li>Clean under ASan, UBSan, ThreadSanitizer, valgrind and cppcheck</li>
+            </ul>
+            <p class="case__tech">C11 · POSIX sockets · pthreads</p>
+            <a class="case__link" href="https://github.com/fas0ftware/janus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case case--flip">
+          <figure class="case__media">
+            <button class="shot" type="button" data-full="assets/projects/heimdall.webp" aria-label="Enlarge: Heimdall market dashboard">
+              <img src="assets/projects/heimdall.webp" alt="Heimdall dashboard: price chart with moving averages, volume, RSI and MACD panels, and risk metrics" width="1400" height="875" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <div class="case__body">
+            <p class="case__meta"><span class="tag">Version 2.0</span><span>Data &amp; finance</span></p>
+            <h3 class="case__title">Heimdall</h3>
+            <p class="case__text">Turns raw market data into signals, risk numbers and "what if" simulations for any Yahoo Finance symbol: US stocks, Borsa Istanbul, crypto, FX and futures.</p>
+            <ul class="case__points">
+              <li>Candlesticks, RSI, MACD, golden and death crosses, Bollinger Bands</li>
+              <li>Time Machine: lump sum versus monthly investing</li>
+              <li>35 tests, including headless UI tests of every tab</li>
+            </ul>
+            <p class="case__tech">Python · pandas · Streamlit · Plotly</p>
+            <a class="case__link" href="https://github.com/fas0ftware/Project_Heimdall" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- More projects -->
+    <section class="section" id="more" aria-labelledby="more-title">
+      <div class="container">
+        <p class="section__index">02 / More projects</p>
+        <h2 id="more-title" class="section__title">More projects</h2>
+
+        <ul class="cards">
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Project_Hugnin" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--terminal"><img src="assets/projects/hugnin.svg" alt="Hugnin terminal output listing RSI signals" width="720" height="622" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">3.0</span> Signals</span>
+              <span class="card__title">Hugnin</span>
+              <span class="card__text">Scans 109 stocks and cryptos for RSI signals in one request; a private Telegram bot sends new ones.</span>
+              <span class="card__tech">Python · yfinance · Telegram</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/ariadne" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--icon"><img src="assets/projects/ariadne.webp" alt="Ariadne app icon" width="512" height="512" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">1.1</span> Mobile app</span>
+              <span class="card__title">Ariadne</span>
+              <span class="card__text">Local-first self-development tracker for Android: hourly check-ins, scores, streaks, insights, backups.</span>
+              <span class="card__tech">React Native · Expo · TypeScript · SQLite</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/JUDA" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb"><img src="assets/projects/juda.webp" alt="JUDA web interface with quick commands in Turkish" width="800" height="500" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">0.2.1</span> Smart home</span>
+              <span class="card__title">JUDA</span>
+              <span class="card__text">Smart-home assistant that understands Turkish commands, with roles, scenes and schedules. No AI needed for the lights.</span>
+              <span class="card__tech">Python · standard library</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/daedalus" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--terminal"><img src="assets/projects/daedalus.svg" alt="Daedalus sandbox settings in a terminal" width="720" height="244" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">0.1.1</span> AI agent</span>
+              <span class="card__title">Daedalus</span>
+              <span class="card__text">Telegram coding assistant: Claude writes Python and runs it in a locked-down, network-less Docker sandbox.</span>
+              <span class="card__tech">Python · Claude API · Docker</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Project_Orion" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--terminal"><img src="assets/projects/orion.svg" alt="Orion terminal output checking a price watchlist" width="899" height="334" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">2.0</span> Price alerts</span>
+              <span class="card__title">Orion</span>
+              <span class="card__text">Watches product pages and messages you on Telegram when a price hits your target or a new low.</span>
+              <span class="card__tech">Python · BeautifulSoup · Telegram</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Project_Dionysus" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb"><img src="assets/projects/dionysus.webp" alt="Dionysus showing Istanbul's weather and the detected mood" width="800" height="500" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">2.0</span> Fun</span>
+              <span class="card__title">Dionysus</span>
+              <span class="card__text">Turns a city's live weather into a mood and a three-track playlist.</span>
+              <span class="card__tech">Python · Streamlit · OpenWeatherMap</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Zarathustra_TTS" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--terminal"><img src="assets/projects/zarathustra.svg" alt="Zarathustra turning a script into speech and subtitles" width="720" height="370" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">2.0</span> Audio</span>
+              <span class="card__title">Zarathustra</span>
+              <span class="card__text">Text-to-speech for long scripts, with subtitles, batch mode and retries.</span>
+              <span class="card__tech">Python · Edge TTS</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Project_Ratatoskr" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--terminal"><img src="assets/projects/ratatoskr.svg" alt="Ratatoskr dry run listing scheduled WhatsApp messages" width="801" height="244" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">2.0</span> Messaging</span>
+              <span class="card__title">Ratatoskr</span>
+              <span class="card__text">WhatsApp Web messages from the command line: several recipients, scheduling, dry runs.</span>
+              <span class="card__tech">Python · Selenium</span>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card__link" href="https://github.com/fas0ftware/Project-Enigma" target="_blank" rel="noopener noreferrer">
+              <span class="card__thumb card__thumb--icon"><img src="assets/projects/enigma.webp" alt="A Wi-Fi QR code made with Enigma" width="370" height="370" loading="lazy" decoding="async"></span>
+              <span class="card__meta"><span class="tag">QR</span> Utility</span>
+              <span class="card__title">Enigma</span>
+              <span class="card__text">QR codes for links and Wi-Fi networks from a small desktop app.</span>
+              <span class="card__tech">Python · Tkinter</span>
+            </a>
+          </li>
+          <li class="card card--soon">
+            <div class="card__link">
+              <span class="card__thumb card__thumb--soon" aria-hidden="true">▶</span>
+              <span class="card__meta"><span class="tag tag--ghost">In progress</span> Video</span>
+              <span class="card__title">Prometheus &amp; Hermes</span>
+              <span class="card__text">A pipeline that produces short quote videos and publishes them to YouTube Shorts and Instagram Reels.</span>
+              <span class="card__tech">Python · ffmpeg · YouTube API</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="section__index">03 / Services</p>
+        <h2 id="services-title" class="section__title">What I can build for you</h2>
+        <ul class="services">
+          <li class="service">
+            <p class="service__num">01</p>
+            <h3 class="service__title">Networking &amp; security tools</h3>
+            <p class="service__text">Network scanning, monitoring, alerting and decoys for homes and small businesses, built defensively.</p>
+          </li>
+          <li class="service">
+            <p class="service__num">02</p>
+            <h3 class="service__title">Automation</h3>
+            <p class="service__text">Scripts and tools that take repetitive work off your hands, from file handling to scheduled reports.</p>
+          </li>
+          <li class="service">
+            <p class="service__num">03</p>
+            <h3 class="service__title">Data</h3>
+            <p class="service__text">Databases, cleaning, processing and dashboards with Python and SQL.</p>
+          </li>
+          <li class="service">
+            <p class="service__num">04</p>
+            <h3 class="service__title">Bots</h3>
+            <p class="service__text">Chat bots, assistants and alerting bots that work around the clock.</p>
+          </li>
+          <li class="service">
+            <p class="service__num">05</p>
+            <h3 class="service__title">Web</h3>
+            <p class="service__text">Clean, fast websites and simple web apps, alongside the services above.</p>
+          </li>
+          <li class="service service--note">
+            <p class="service__num">+</p>
+            <h3 class="service__title">How I work</h3>
+            <p class="service__text">Tests, CI and security scans from day one, a README that explains how it works, and code you own.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div>
+          <p class="section__index">04 / About</p>
+          <h2 id="about-title" class="section__title">About</h2>
+        </div>
         <p class="about__text">
           I'm Anıl, the developer behind FA Software. I studied web development in high school
-          and computer programming at university, and I work with Python, JavaScript, SQL, networking
+          and computer programming at university, and I work with Python, C, JavaScript, SQL, networking
           and cybersecurity. I build practical tools that save time, make sense of data and keep
-          systems running, from small scripts to complete applications. I build in public and share
+          systems safe, from small scripts to complete applications. I build in public and share
           real progress in my short-video series <em>Coding Until Noticed</em> on Instagram.
         </p>
       </div>
     </section>
 
-    <!-- 3. Services -->
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <p class="section__index">02 / Services</p>
-        <h2 id="services-title" class="section__title">Services</h2>
-        <ul class="services">
-          <li class="service">
-            <h3 class="service__title">Automation</h3>
-            <p class="service__text">Scripts and tools that take repetitive tasks off your hands, from file handling to scheduled reports.</p>
-          </li>
-          <li class="service">
-            <h3 class="service__title">Data</h3>
-            <p class="service__text">Databases, data cleaning, processing and reporting with Python and SQL.</p>
-          </li>
-          <li class="service">
-            <h3 class="service__title">Bots</h3>
-            <p class="service__text">Chat bots, assistants and scrapers that work around the clock.</p>
-          </li>
-          <li class="service">
-            <h3 class="service__title">Networking &amp; Security Tools</h3>
-            <p class="service__text">Network scanning, monitoring and security tooling for homes and small businesses.</p>
-          </li>
-          <li class="service">
-            <h3 class="service__title">Web</h3>
-            <p class="service__text">Clean, fast websites and simple web apps, offered alongside the services above.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 4. Projects -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <p class="section__index">03 / Projects</p>
-        <h2 id="projects-title" class="section__title">Projects</h2>
-        <p class="projects__hint">Swipe or scroll sideways to see more.</p>
-      </div>
-
-      <div class="projects" role="region" aria-labelledby="projects-title" tabindex="0">
-        <ul class="projects__track">
-          <li class="project">
-            <p class="project__status">Version 2.1</p>
-            <h3 class="project__title">Home Network Monitor</h3>
-            <p class="project__text">Scans the home network, alerts on new devices and risky open ports (desktop or phone push), activity timeline, and a security advisor that explains every open port, how to close it, and scores the network.</p>
-            <p class="project__tech">Python · Scapy · SQLite · Flask</p>
-            <a class="project__link" href="https://github.com/fas0ftware/network-monitor" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 0.3.1</p>
-            <h3 class="project__title">Maze</h3>
-            <p class="project__text">Layered honeypot with a C engine: fake progress, growing delays, every move logged; Minator report and Docker image.</p>
-            <p class="project__tech">C · libsodium · Python · Flask</p>
-            <a class="project__link" href="https://github.com/fas0ftware/maze" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 1.5</p>
-            <h3 class="project__title">Janus</h3>
-            <p class="project__text">Dependency-free TCP and UDP port scanner: host discovery, every host in one worker pool, IPv4/IPv6, CIDR blocks, banners, JSON output, clean under sanitizers.</p>
-            <p class="project__tech">C11 · POSIX sockets · pthreads</p>
-            <a class="project__link" href="https://github.com/fas0ftware/janus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 2.0</p>
-            <h3 class="project__title">Heimdall</h3>
-            <p class="project__text">Stock dashboard: candlesticks, RSI, MACD, moving-average crosses, risk metrics, lump sum vs. monthly investing, comparisons.</p>
-            <p class="project__tech">Python · Streamlit · Plotly</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Project_Heimdall" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 3.0</p>
-            <h3 class="project__title">Hugnin</h3>
-            <p class="project__text">Scans 109 stocks and cryptos for RSI signals in one request, plus a private Telegram bot with new-signal alerts.</p>
-            <p class="project__tech">Python · yfinance · Telegram</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Project_Hugnin" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 2.0</p>
-            <h3 class="project__title">Orion</h3>
-            <p class="project__text">Watches product pages and sends a Telegram message when a price reaches your target or a new low.</p>
-            <p class="project__tech">Python · BeautifulSoup · Telegram</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Project_Orion" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 0.2.1</p>
-            <h3 class="project__title">JUDA</h3>
-            <p class="project__text">Smart-home assistant that understands Turkish commands, with roles, scenes and scheduled commands.</p>
-            <p class="project__tech">Python · standard library</p>
-            <a class="project__link" href="https://github.com/fas0ftware/JUDA" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 1.1</p>
-            <h3 class="project__title">Ariadne</h3>
-            <p class="project__text">Local-first self-development tracker for Android: hourly check-ins, scores, streaks, insights and backups.</p>
-            <p class="project__tech">React Native · Expo · TypeScript · SQLite</p>
-            <a class="project__link" href="https://github.com/fas0ftware/ariadne" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 2.0</p>
-            <h3 class="project__title">Dionysus</h3>
-            <p class="project__text">Turns a city&#x27;s live weather into a mood and a three-track playlist.</p>
-            <p class="project__tech">Python · Streamlit · OpenWeatherMap</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Project_Dionysus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 2.0</p>
-            <h3 class="project__title">Zarathustra</h3>
-            <p class="project__text">Text-to-speech engine for long scripts, with subtitles and batch mode.</p>
-            <p class="project__tech">Python · Edge TTS</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Zarathustra_TTS" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project">
-            <p class="project__status">Version 2.0</p>
-            <h3 class="project__title">Ratatoskr</h3>
-            <p class="project__text">Sends WhatsApp Web messages from the command line: several recipients, scheduling, dry runs.</p>
-            <p class="project__tech">Python · Selenium</p>
-            <a class="project__link" href="https://github.com/fas0ftware/Project_Ratatoskr" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
-          </li>
-          <li class="project project--soon">
-            <p class="project__status">In progress</p>
-            <h3 class="project__title">Prometheus &amp; Hermes</h3>
-            <p class="project__text">Automated pipeline that produces short quote videos and publishes them to YouTube Shorts and Instagram Reels.</p>
-            <p class="project__tech">Python · ffmpeg · YouTube API</p>
-            <span class="project__link project__link--disabled">GitHub link coming soon</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 5. Contact -->
+    <!-- Contact -->
     <section class="section section--contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <p class="section__index">04 / Contact</p>
+        <p class="section__index">05 / Contact</p>
         <h2 id="contact-title" class="section__title">Let's work together</h2>
         <p class="contact__text">Have a project in mind? Send an email and tell me what you need.</p>
         <a class="contact__email" href="mailto:anil.hyperborea@gmail.com">anil.hyperborea@gmail.com</a>
@@ -215,9 +346,15 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container site-footer__inner">
       <p>© 2026 FA Software</p>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Enlarged screenshot">
+    <button class="lightbox__close" type="button" aria-label="Close">✕</button>
+    <img class="lightbox__img" src="data:," alt="">
+  </dialog>
 </body>
 </html>

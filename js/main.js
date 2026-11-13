@@ -46,3 +46,28 @@
     }
   });
 })();
+
+// Lightbox: a screenshot button opens its full image in a <dialog>.
+(function () {
+  const dialog = document.querySelector(".lightbox");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  const image = dialog.querySelector(".lightbox__img");
+
+  document.querySelectorAll(".shot").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const thumb = button.querySelector("img");
+      image.src = button.dataset.full;
+      image.alt = thumb ? thumb.alt : "";
+      dialog.showModal();
+    });
+  });
+
+  dialog.querySelector(".lightbox__close").addEventListener("click", function () {
+    dialog.close();
+  });
+
+  // A click on the dark backdrop (outside the image) closes it too.
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) dialog.close();
+  });
+})();
