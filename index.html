@@ -69,7 +69,7 @@
         <div class="hero__visual" aria-hidden="true">
           <img class="hero__shot hero__shot--main" src="assets/projects/network-monitor.webp" alt="" width="1400" height="875">
           <img class="hero__shot hero__shot--side" src="assets/projects/maze.webp" alt="" width="1400" height="840">
-          <img class="hero__shot hero__shot--term" src="assets/projects/janus.svg" alt="" width="826" height="334">
+          <img class="hero__shot hero__shot--term" src="assets/projects/janus.svg" alt="" width="826" height="370">
         </div>
 
         <ul class="facts" aria-label="At a glance">
@@ -133,17 +133,17 @@
         <article class="case">
           <figure class="case__media case__media--terminal">
             <button class="shot" type="button" data-full="assets/projects/janus.svg" aria-label="Enlarge: Janus scan output">
-              <img src="assets/projects/janus.svg" alt="Janus terminal output: host discovery marks two silent hosts down, finds an open web port with its banner, and a UDP scan" width="826" height="334" loading="lazy" decoding="async">
+              <img src="assets/projects/janus.svg" alt="Janus terminal output: host discovery skips silent hosts, then names what runs on each open port: nginx 1.27, a TLS 1.3 service with its self-signed certificate, Redis and OpenSSH 9.7" width="826" height="370" loading="lazy" decoding="async">
             </button>
           </figure>
           <div class="case__body">
-            <p class="case__meta"><span class="tag">Version 1.5</span><span>Port scanner</span></p>
+            <p class="case__meta"><span class="tag">Version 1.9</span><span>Port scanner</span></p>
             <h3 class="case__title">Janus</h3>
             <p class="case__text">A dependency-free port scanner written in C. One pool of worker threads covers every host at once, so a silent subnet costs one timeout instead of hundreds.</p>
             <ul class="case__points">
-              <li>TCP and UDP, host discovery without root, IPv4/IPv6, CIDR blocks</li>
-              <li>Sanitized banners and JSON output for other tools</li>
-              <li>Clean under ASan, UBSan, ThreadSanitizer, valgrind and cppcheck</li>
+              <li>Names what really runs on a port (OpenSSH 9.7, nginx 1.27) and checks TLS certificates, STARTTLS included</li>
+              <li>TCP and UDP, host discovery without root, adaptive timeouts, IPv4/IPv6, CIDR, JSON</li>
+              <li>Fuzzed parsers; clean under ASan, UBSan, ThreadSanitizer, valgrind and cppcheck</li>
             </ul>
             <p class="case__tech">C11 · POSIX sockets · pthreads</p>
             <a class="case__link" href="https://github.com/fas0ftware/janus" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
