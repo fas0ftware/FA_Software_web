@@ -12,7 +12,7 @@ Plain HTML, CSS and JavaScript. No frameworks, no build step.
 ## Features
 
 - Black and white design, mobile-first and responsive; the colour comes only from real project screenshots
-- **Selected work:** the main projects (Home Network Monitor, Maze, Janus, Heimdall) as case studies with large screenshots, highlights and tech
+- **Selected work:** the main projects (Lynceus, Maze, Janus, Heimdall) as case studies with large screenshots, highlights and tech
 - **More projects:** a grid of every other public project with a thumbnail (greyscale until hovered, on devices that can hover)
 - Screenshots open in a lightbox (`<dialog>`), images are lazy-loaded WebP or SVG with fixed dimensions (no layout shift)
 - Hero collage of real screenshots, section navigation in the header
@@ -36,7 +36,7 @@ js/main.js          Theme toggle and screenshot lightbox
 assets/
   logo-dark.png     Black logo, used on light backgrounds
   logo-light.png    White logo, used on dark backgrounds
-  projects/         Project screenshots (WebP, cropped to 16:10) and terminal recordings (SVG)
+  projects/         Project screenshots (WebP, cropped to 16:10), the Janus terminal recording (SVG)
 tools/
   check_site.py     Sanity checks (broken links, missing files, alt texts, placeholders)
 .github/workflows/
