@@ -157,18 +157,22 @@
 
         <article class="case case--flip">
           <figure class="case__media">
-            <button class="shot" type="button" data-full="assets/projects/mnemosyne.webp" aria-label="Enlarge: Mnemosyne in the terminal">
+            <button class="shot" type="button" data-full="assets/projects/mnemosyne-app.webp" aria-label="Enlarge: the Mnemosyne app">
+              <img src="assets/projects/mnemosyne-app.webp" alt="The Mnemosyne app: six snapshots, a chart of the data each one added, 4.9 times less space than full copies, and the list of snapshots" width="1200" height="750" loading="lazy" decoding="async">
+            </button>
+            <button class="shot shot--inset" type="button" data-full="assets/projects/mnemosyne.webp" aria-label="Enlarge: Mnemosyne in the terminal">
               <img src="assets/projects/mnemosyne.webp" alt="Mnemosyne in the terminal: a first backup of 3857 files in 8 seconds, an unchanged second backup in 0.4 seconds, every chunk decrypted and verified, and a restore that diff finds identical" width="1200" height="750" loading="lazy" decoding="async">
             </button>
           </figure>
           <div class="case__body">
-            <p class="case__meta"><span class="tag">Version 0.2</span><span>Backup &amp; cryptography</span></p>
+            <p class="case__meta"><span class="tag">Version 0.3</span><span>Backup &amp; cryptography</span></p>
             <h3 class="case__title">Mnemosyne</h3>
             <p class="case__text">Encrypted backups that test their own restores. Named after the goddess of memory: a backup you have never restored is a hope, so checking that every byte comes back is part of the routine.</p>
             <ul class="case__points">
               <li>Content-defined chunks and keyed BLAKE3 ids: equal data is stored once, an unchanged backup of 3,857 files takes 0.4 s</li>
               <li>XChaCha20-Poly1305 with an Argon2id-wrapped key; restores treat snapshots as untrusted input</li>
               <li>Daily verification of a random 10 %, full restore drills, and a diff between any two snapshots</li>
+              <li>An app to browse, compare, verify and download from any snapshot, locked until you open it</li>
               <li>Two disks on hourly timers; status shown in the Olympos dashboard</li>
             </ul>
             <p class="case__tech">Rust · RustCrypto · BLAKE3 · FastCDC · zstd</p>
