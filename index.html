@@ -165,13 +165,13 @@
             </button>
           </figure>
           <div class="case__body">
-            <p class="case__meta"><span class="tag">Version 0.3</span><span>Backup &amp; cryptography</span></p>
+            <p class="case__meta"><span class="tag">Version 0.4</span><span>Backup &amp; cryptography</span></p>
             <h3 class="case__title">Mnemosyne</h3>
             <p class="case__text">Encrypted backups that test their own restores. Named after the goddess of memory: a backup you have never restored is a hope, so checking that every byte comes back is part of the routine.</p>
             <ul class="case__points">
               <li>Content-defined chunks and keyed BLAKE3 ids: equal data is stored once, an unchanged backup of 3,857 files takes 0.4 s</li>
               <li>XChaCha20-Poly1305 with an Argon2id-wrapped key; restores treat snapshots as untrusted input</li>
-              <li>Daily verification of a random 10 %, full restore drills, and a diff between any two snapshots</li>
+              <li>Daily verification of a random 10 %, full restore drills, a diff between any two snapshots, and a paper recovery code</li>
               <li>An app to browse, compare, verify and download from any snapshot, locked until you open it</li>
               <li>Two disks on hourly timers; status shown in the Olympos dashboard</li>
             </ul>
