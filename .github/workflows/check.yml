@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read   # the check only reads the site; the token gets nothing else
+
 jobs:
   check:
     runs-on: ubuntu-latest
